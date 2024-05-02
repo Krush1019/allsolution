@@ -1,0 +1,14 @@
+<div class="row d-flex justify-content-center align-items-center">
+  <ng-container *ngIf="text">
+    <div
+      class="col-md-6 col-12 image-container d-flex justify-content-center align-items-center"
+    >
+      <div class="image-div">
+        <img [src]="imageData.src" [alt]="imageData.alt" class="rounded" />
+      </div>
+    </div>
+    <div class="col-md-6 col-12">
+      <p [innerHTML]="text"></p>
+    </div>
+  </ng-container>
+</div>

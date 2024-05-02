@@ -1,0 +1,68 @@
+/* Bootstrap 5 CSS and icons included */
+:root {
+  --colorPrimaryNormal: #00b3bb;
+  --colorPrimaryDark: #00979f;
+  --colorPrimaryGlare: #00cdd7;
+  --colorPrimaryHalf: #80d9dd;
+  --colorPrimaryQuarter: #bfecee;
+  --colorPrimaryEighth: #dff5f7;
+  --colorPrimaryPale: #f3f5f7;
+  --colorPrimarySeparator: #f3f5f7;
+  --colorPrimaryOutline: #dff5f7;
+  --colorButtonNormal: #00b3bb;
+  --colorButtonHover: #00cdd7;
+  --colorLinkNormal: #00979f;
+  --colorLinkHover: #00cdd7;
+}
+
+/* body {
+  overflow: hidden;
+} */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-bottom {
+  background: white;
+  padding: 1rem;
+}
+
+/* loader css */
+.custom-loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: -20px 0px, 20px 0px;
+  animation: l18 1s infinite;
+}
+@keyframes l18 {
+  25% {
+    box-shadow: -20px -20px, 20px 20px;
+  }
+  50% {
+    box-shadow: 0px -20px, 0px 20px;
+  }
+  75% {
+    box-shadow: 20px -20px, -20px 20px;
+  }
+  100% {
+    box-shadow: 20px 0px, -20px 0px;
+  }
+}

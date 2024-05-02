@@ -1,0 +1,41 @@
+<div class="container vh-100 d-flex flex-column justify-content-center">
+  <div class="custom-loader" *ngIf="loader | async">
+    <div class="loader"></div>
+  </div>
+  <app-upload
+    *ngIf="!showDetails; else details"
+    [resetSubject]="resetSubject"
+    [submitSubject]="submitSubject"
+    (fileAdded)="handleImageData($event)"
+    (fileSubmitted)="handleShowDetails($event)"
+  ></app-upload>
+  <ng-template #details>
+    <app-details
+      *ngIf="showDetails && imageData.base64"
+      [imageData]="imageData"
+    ></app-details>
+  </ng-template>
+
+  <div class="fixed-bottom">
+    <div class="d-flex align-items-center justify-content-between">
+      <div>AllSol</div>
+      <div>
+        <button
+          class="btn btn-outline-secondary"
+          *ngIf="showNext"
+          (click)="reset()"
+        >
+          reset
+        </button>
+        <button
+          *ngIf="showNext"
+          class="btn btn-outline-primary ms-3"
+          [disabled]="!showNext"
+          (click)="next()"
+        >
+          Find Solution
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
